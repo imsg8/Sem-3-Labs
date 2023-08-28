@@ -9,8 +9,7 @@ void findTriplets(int arr[], int n)
 		for (int j = i + 1; j < n - 1; j++) {
 			for (int k = j + 1; k < n; k++) {
 				if (arr[i] + arr[j] + arr[k] == 0) {
-					printf("%d %d %d\n", arr[i], arr[j],
-						arr[k]);
+					printf("%d %d %d\n", arr[i], arr[j], arr[k]);
 					found = true;
 				}
 			}
