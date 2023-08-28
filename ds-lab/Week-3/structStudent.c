@@ -1,74 +1,95 @@
-/* Write a C program to implement the following functions. Use pointers and dynamic memory management functions.
-i. To read one Student object where Student is a structure with name, roll number and CGPA as the data members.
-ii. To display one Student object.
-iii. To sort an array of Student structures according to the roll number. */
+/* Create a structure STUDENT consisting of variables of structures:
+i. DOB {day, month (use pointer), year). ii. STU_INFO (reg_no, name(use pointer), address),
+i. COLLEGE (college_name (use pointer), university_name )
+where structure types from i to in are declared outside the STUDENT independently.
+Show how to read and display member variables of DOB type if pointer variable is created for 
+DOB inside STUDENT and STUDENT variable is also a pointer variable. The program should read 
+and display the values of all members of STUDENT structure. */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-struct Student {
-    char name[50];
-    int rollNumber;
-    float cgpa;
+// Structure for Date of Birth (DOB)
+struct DOB {
+    int day;
+    int *month; // Using pointer for month
+    int year;
 };
 
-void readStudent(struct Student *student) {
-    printf("Enter student name: ");
-    scanf("%s", student->name);
-    
-    printf("Enter roll number: ");
-    scanf("%d", &student->rollNumber);
-    
-    printf("Enter CGPA: ");
-    scanf("%f", &student->cgpa);
-}
+// Structure for Student Information (STU_INFO)
+struct STU_INFO {
+    int reg_no;
+    char *name; // Using pointer for name
+    char *address;
+};
 
-void displayStudent(const struct Student *student) {
-    printf("Name: %s\n", student->name);
-    printf("Roll Number: %d\n", student->rollNumber);
-    printf("CGPA: %.2f\n", student->cgpa);
-}
+// Structure for College
+struct COLLEGE {
+    char *college_name;
+    char *university_name;
+};
 
-int compareStudents(const void *a, const void *b) {
-    const struct Student *studentA = (const struct Student *)a;
-    const struct Student *studentB = (const struct Student *)b;
-    
-    return studentA->rollNumber - studentB->rollNumber;
-}
+// Structure for Student (containing nested structures)
+struct STUDENT {
+    struct DOB dob;
+    struct STU_INFO stu_info;
+    struct COLLEGE college;
+};
 
 int main() {
-    int numStudents;
-    
-    printf("Enter the number of students: ");
-    scanf("%d", &numStudents);
-    
-    struct Student *students = (struct Student *)malloc(numStudents * sizeof(struct Student));
-    if (students == NULL) {
+    // Declare a pointer to STUDENT structure
+    struct STUDENT *student;
+
+    // Allocate memory for student structure
+    student = (struct STUDENT *)malloc(sizeof(struct STUDENT));
+    if (student == NULL) {
         printf("Memory allocation failed\n");
         return 1;
     }
-    
-    for (int i = 0; i < numStudents; ++i) {
-        printf("Enter details for student %d:\n", i + 1);
-        readStudent(&students[i]);
-    }
-    
+
+    // Allocate memory for nested structures
+    student->dob.month = (int *)malloc(sizeof(int));
+    student->stu_info.name = (char *)malloc(50 * sizeof(char));
+    student->stu_info.address = (char *)malloc(100 * sizeof(char));
+    student->college.college_name = (char *)malloc(50 * sizeof(char));
+    student->college.university_name = (char *)malloc(50 * sizeof(char));
+
+    // Read student details
+    printf("Enter student's date of birth (day month year): ");
+    scanf("%d %d %d", &student->dob.day, student->dob.month, &student->dob.year);
+
+    printf("Enter student's registration number: ");
+    scanf("%d", &student->stu_info.reg_no);
+
+    printf("Enter student's name: ");
+    scanf("%s", student->stu_info.name);
+
+    printf("Enter student's address: ");
+    scanf(" %s [^\n]", student->stu_info.address);
+
+    printf("Enter college name: ");
+    scanf("%s", student->college.college_name);
+
+    printf("Enter university name: ");
+    scanf("%s", student->college.university_name);
+
+    printf("\n \n ");
+    // Display student details
     printf("\nStudent details:\n");
-    for (int i = 0; i < numStudents; ++i) {
-        printf("\nStudent %d:\n", i + 1);
-        displayStudent(&students[i]);
-    }
-    
-    qsort(students, numStudents, sizeof(struct Student), compareStudents);
-    
-    printf("\nSorted by roll number:\n");
-    for (int i = 0; i < numStudents; ++i) {
-        printf("\nStudent %d:\n", i + 1);
-        displayStudent(&students[i]);
-    }
-    
-    free(students);
-    
+    printf("Date of Birth: %d/%d/%d\n", student->dob.day, *(student->dob.month), student->dob.year);
+    printf("Registration Number: %d\n", student->stu_info.reg_no);
+    printf("Name: %s\n", student->stu_info.name);
+    printf("Address: %s\n", student->stu_info.address);
+    printf("College: %s\n", student->college.college_name);
+    printf("University: %s\n", student->college.university_name);
+
+    // Free allocated memory
+    free(student->dob.month);
+    free(student->stu_info.name);
+    free(student->stu_info.address);
+    free(student->college.college_name);
+    free(student->college.university_name);
+    free(student);
+
     return 0;
 }
