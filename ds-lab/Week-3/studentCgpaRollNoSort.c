@@ -51,8 +51,24 @@ int main() {
 
     printf("Enter the number of students: ");
     scanf("%d", &n);
+/* malloc() - 
+    
+The function malloc() is used to allocate the requested size of bytes and it returns a pointer to the first byte of allocated memory. It returns null pointer, if fails.
 
-    // Allocate memory for an array of Student objects
+Here is the syntax of malloc() in C language,
+
+pointer_name = (cast-type*) malloc(size);
+Here,
+
+pointer_name − Any name given to the pointer.
+
+cast-type − The datatype in which you want to cast the allocated memory by malloc().
+
+size − Size of allocated memory in bytes. */
+    
+
+// Allocate memory for an array of Student objects
+
     struct Student *students = (struct Student *)malloc(n * sizeof(struct Student));
 
     if (students == NULL) {
