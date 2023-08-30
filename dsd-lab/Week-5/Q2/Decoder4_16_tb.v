@@ -13,27 +13,22 @@ Decoder4_16 D2(w, e, y);
     $dumpfile("Decoder4_16_tb.vcd");
     $dumpvars(0, Decoder4_16_tb);
 
-    // Test case 1: Select input 0
     e=1;
     w = 0;
     #20;
 
-    // Test case 2: Select input 1
     e=1;
     w = 1;
     #20;
 
-    // Test case 3: Select input 2
     e=1;
     w = 2;
     #20;
 
-    // Test case 4: Select input 3
     e=1;
     w = 3;
     #20;
     
-    //Don't care case
     e=1;
     w = 4;
     #20;
