@@ -11,9 +11,8 @@ else if (s==2'b01)
     f = w[1];
 else if (s==2'b10)
     f = w[2];
-else (s==2'b11)
-    f = w[3];
-    
+else if(s==2'b11)
+    f = w[3];    
     end
 endmodule
 
@@ -21,7 +20,7 @@ module lab5p1(a,b,c,d,f);
     input a,b,c,d;
     output f;
     wire [1:0]m;
-    wire [1:0]n;
+    wire [3:0]n;
     assign m = {a , b};
     assign n[0] = (~c & ~d);
     assign n[1] = ~d;
