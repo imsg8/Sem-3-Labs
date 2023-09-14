@@ -7,8 +7,8 @@ module lab5q3_tb;
 
   lab5q3 l1(w,f);
   initial begin
-        $dumpfile("Encoder4_2_tb.vcd");
-        $dumpvars(0, Encoder4_2_tb);
+        $dumpfile("lab5q3_tb.vcd");
+        $dumpvars(0, lab5q3_tb);
 
 w = 4'b 0000;
 #20;
