@@ -5,7 +5,7 @@ module gtob8to1mux_tb;
   reg [3:0]g;
   wire [3:0]b;
 
-  gtobmux8to1 g1(g,b);
+  gtob8to1mux uut(g,b);
 
   initial begin
     $dumpfile("gtob8to1mux_tb.vcd");
