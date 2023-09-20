@@ -1,15 +1,15 @@
 `timescale 1ns/1ns
-`include "lab5q4.v"
+`include "dec.v"
 
-module lab5q4_tb;
+module dec_tb;
 	reg [2:0] w;
     wire f;
 
-	lab5q4 l1(w, f);
+	dec d1(w, f);
 
     initial begin
-        $dumpfile("lab5q4_tb.vcd");
-        $dumpvars(0, lab5q4_tb);
+        $dumpfile("dec_tb.vcd");
+        $dumpvars(0, dec_tb);
 
 		w = 3'b 000; #20;
 		w = 3'b 001; #20;
@@ -24,4 +24,3 @@ module lab5q4_tb;
         $finish;
     end
 endmodule
-
