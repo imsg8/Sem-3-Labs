@@ -5,8 +5,6 @@ struct Node {
     int data;
     struct Node* next;
 };
-
-// Function to insert an element at the end of a linked list
 struct Node* insert(struct Node* head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -23,8 +21,6 @@ struct Node* insert(struct Node* head, int data) {
     current->next = newNode;
     return head;
 }
-
-// Function to display a linked list
 void display(struct Node* head) {
     struct Node* current = head;
     while (current != NULL) {
@@ -33,8 +29,6 @@ void display(struct Node* head) {
     }
     printf("NULL\n");
 }
-
-// Function to find the UNION of two linked lists
 struct Node* unionLists(struct Node* list1, struct Node* list2) {
     struct Node* result = NULL;
     while (list1 != NULL) {
@@ -47,8 +41,6 @@ struct Node* unionLists(struct Node* list1, struct Node* list2) {
     }
     return result;
 }
-
-// Function to find the INTERSECTION of two linked lists
 struct Node* intersectionLists(struct Node* list1, struct Node* list2) {
     struct Node* result = NULL;
     while (list1 != NULL) {
