@@ -1,0 +1,220 @@
+$date
+	Thu Sep 14 09:45:43 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module gtob8to1mux_tb $end
+$var wire 4 ! b [3:0] $end
+$var reg 4 " g [3:0] $end
+$scope module uut $end
+$var wire 4 # g [3:0] $end
+$var wire 8 $ m1 [0:7] $end
+$var wire 8 % m2 [0:7] $end
+$var wire 8 & m3 [0:7] $end
+$var wire 8 ' m0 [0:7] $end
+$var wire 4 ( b [3:0] $end
+$scope module st0 $end
+$var wire 3 ) s [2:0] $end
+$var wire 8 * w [0:7] $end
+$var reg 1 + f $end
+$upscope $end
+$scope module st1 $end
+$var wire 3 , s [2:0] $end
+$var wire 8 - w [0:7] $end
+$var reg 1 . f $end
+$upscope $end
+$scope module st2 $end
+$var wire 3 / s [2:0] $end
+$var wire 8 0 w [0:7] $end
+$var reg 1 1 f $end
+$upscope $end
+$scope module st3 $end
+$var wire 3 2 s [2:0] $end
+$var wire 8 3 w [0:7] $end
+$var reg 1 4 f $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+04
+b1101001 3
+b0 2
+01
+b1101001 0
+b0 /
+0.
+b111100 -
+b0 ,
+0+
+b1111 *
+b0 )
+b0 (
+b1101001 '
+b1111 &
+b111100 %
+b1101001 $
+b0 #
+b0 "
+b0 !
+$end
+#20
+b1 !
+b1 (
+14
+b10010110 '
+b10010110 3
+b1 "
+b1 #
+#40
+11
+b11 !
+b11 (
+14
+b1101001 '
+b1101001 3
+b1 )
+b1 ,
+b1 /
+b1 2
+b10 "
+b10 #
+#60
+b10 !
+b10 (
+04
+b10010110 '
+b10010110 3
+b11 "
+b11 #
+#80
+14
+b111 !
+b111 (
+1.
+b1101001 '
+b1101001 3
+b10 )
+b10 ,
+b10 /
+b10 2
+b100 "
+b100 #
+#100
+b110 !
+b110 (
+04
+b10010110 '
+b10010110 3
+b101 "
+b101 #
+#120
+b100 !
+b100 (
+01
+b1101001 '
+b1101001 3
+b11 )
+b11 ,
+b11 /
+b11 2
+b110 "
+b110 #
+#140
+b101 !
+b101 (
+14
+b10010110 '
+b10010110 3
+b111 "
+b111 #
+#160
+1+
+11
+b1111 !
+b1111 (
+14
+b1101001 '
+b1101001 3
+b100 )
+b100 ,
+b100 /
+b100 2
+b1000 "
+b1000 #
+#180
+b1110 !
+b1110 (
+04
+b10010110 '
+b10010110 3
+b1001 "
+b1001 #
+#200
+b1100 !
+b1100 (
+01
+b1101001 '
+b1101001 3
+b101 )
+b101 ,
+b101 /
+b101 2
+b1010 "
+b1010 #
+#220
+b1101 !
+b1101 (
+14
+b10010110 '
+b10010110 3
+b1011 "
+b1011 #
+#240
+0.
+b1000 !
+b1000 (
+04
+b1101001 '
+b1101001 3
+b110 )
+b110 ,
+b110 /
+b110 2
+b1100 "
+b1100 #
+#260
+b1001 !
+b1001 (
+14
+b10010110 '
+b10010110 3
+b1101 "
+b1101 #
+#280
+11
+b1011 !
+b1011 (
+14
+b1101001 '
+b1101001 3
+b111 )
+b111 ,
+b111 /
+b111 2
+b1110 "
+b1110 #
+#300
+b1010 !
+b1010 (
+04
+b10010110 '
+b10010110 3
+b1111 "
+b1111 #
+#320

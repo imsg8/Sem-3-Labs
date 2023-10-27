@@ -1,0 +1,197 @@
+$date
+	Thu Oct 12 09:48:22 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module sreg_tb $end
+$var wire 4 ! A [3:0] $end
+$var reg 4 " I [3:0] $end
+$var reg 2 # S [1:0] $end
+$var reg 1 $ clk $end
+$scope module s $end
+$var wire 4 % I [3:0] $end
+$var wire 2 & S [1:0] $end
+$var wire 1 $ clk $end
+$var wire 4 ' D [3:0] $end
+$var wire 4 ( A [3:0] $end
+$scope module D1 $end
+$var wire 1 ) D $end
+$var wire 1 $ clk $end
+$var wire 1 * reset $end
+$var reg 1 + Q $end
+$upscope $end
+$scope module D2 $end
+$var wire 1 , D $end
+$var wire 1 $ clk $end
+$var wire 1 - reset $end
+$var reg 1 . Q $end
+$upscope $end
+$scope module D3 $end
+$var wire 1 / D $end
+$var wire 1 $ clk $end
+$var wire 1 0 reset $end
+$var reg 1 1 Q $end
+$upscope $end
+$scope module D4 $end
+$var wire 1 2 D $end
+$var wire 1 $ clk $end
+$var wire 1 3 reset $end
+$var reg 1 4 Q $end
+$upscope $end
+$scope module M1 $end
+$var wire 2 5 S [1:0] $end
+$var wire 4 6 W [0:3] $end
+$var reg 1 7 f $end
+$upscope $end
+$scope module M2 $end
+$var wire 2 8 S [1:0] $end
+$var wire 4 9 W [0:3] $end
+$var reg 1 : f $end
+$upscope $end
+$scope module M3 $end
+$var wire 2 ; S [1:0] $end
+$var wire 4 < W [0:3] $end
+$var reg 1 = f $end
+$upscope $end
+$scope module M4 $end
+$var wire 2 > S [1:0] $end
+$var wire 4 ? W [0:3] $end
+$var reg 1 @ f $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0@
+b0xx ?
+b1 >
+1=
+bx1xx <
+b1 ;
+1:
+bx1xx 9
+b1 8
+17
+bx1xx 6
+b1 5
+x4
+03
+02
+x1
+00
+1/
+x.
+0-
+1,
+x+
+0*
+1)
+bx (
+b1110 '
+b1 &
+b1110 %
+1$
+b1 #
+b1110 "
+bx !
+$end
+#10
+0$
+#20
+b0 ?
+b111 <
+b1111 9
+b1111 6
+04
+11
+1.
+b1110 !
+b1110 (
+1+
+1)
+1,
+0/
+17
+1:
+b1100 '
+0=
+1$
+b0 #
+b0 &
+b0 5
+b0 8
+b0 ;
+b0 >
+#30
+0$
+#40
+b100 <
+b111 9
+b1100 !
+b1100 (
+01
+0)
+12
+07
+1@
+1/
+b1011 6
+b100 ?
+b111 '
+1=
+1$
+b111 "
+b111 %
+b1 #
+b1 &
+b1 5
+b1 8
+b1 ;
+b1 >
+#50
+0$
+#60
+b1111 <
+b1111 9
+14
+11
+b111 !
+b111 (
+0+
+0)
+1/
+12
+b1100 6
+b1011 ?
+07
+1=
+b111 '
+1@
+1$
+b1110 "
+b1110 %
+b10 #
+b10 &
+b10 5
+b10 8
+b10 ;
+b10 >
+#70
+0$
+#80
+1$
+b11 #
+b11 &
+b11 5
+b11 8
+b11 ;
+b11 >
+#90
+0$
+#100
+1$

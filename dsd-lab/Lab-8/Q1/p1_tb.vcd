@@ -1,0 +1,74 @@
+$date
+	Thu Oct 19 10:53:00 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module p1_tb $end
+$var wire 1 ! y $end
+$var wire 3 " l [2:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$var reg 1 % x $end
+$scope module out $end
+$var wire 1 # clk $end
+$var wire 3 & l [2:0] $end
+$var wire 3 ' q [2:0] $end
+$var wire 1 ( reset $end
+$var wire 1 % x $end
+$var wire 1 ! y $end
+$var wire 3 ) s [2:0] $end
+$scope module st0 $end
+$var wire 1 * clk $end
+$var wire 1 + d $end
+$var wire 1 # reset $end
+$var reg 1 , q $end
+$upscope $end
+$scope module st1 $end
+$var wire 1 - clk $end
+$var wire 1 . d $end
+$var wire 1 # reset $end
+$var reg 1 / q $end
+$upscope $end
+$scope module st2 $end
+$var wire 1 0 clk $end
+$var wire 1 1 d $end
+$var wire 1 # reset $end
+$var reg 1 2 q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x2
+x1
+z0
+x/
+x.
+z-
+x,
+x+
+z*
+bx )
+x(
+bz '
+bz &
+0%
+0$
+x#
+bz "
+x!
+$end
+#20
+0+
+b0xx )
+1$
+1%
+#40
+x+
+bx )
+0%
